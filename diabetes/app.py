@@ -9,7 +9,7 @@ st.set_page_config(page_title="Diabetes Prediction System", page_icon="Consultan
 @st.cache_resource
 def load_assets():
     model = tf.keras.models.load_model('diabetes/diabetes_model.keras')
-    with open('scaler.pkl', 'rb') as f:
+    with open('diabetes/scaler.pkl', 'rb') as f:
         scaler = pickle.load(f)
     return model, scaler
 
